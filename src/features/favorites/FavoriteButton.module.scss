@@ -1,0 +1,27 @@
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 10px 14px;
+  border: 1px solid #d1d5db;
+  border-radius: 10px;
+  background: #fff;
+  color: #374151;
+  cursor: pointer;
+
+  span {
+    font-size: 22px;
+    line-height: 1;
+  }
+
+  &[aria-pressed='true'] {
+    background: #e5e7eb;
+    border-color: #9ca3af;
+    color: #374151;
+  }
+
+  &:hover {
+    background: #f3f4f6;
+  }
+}

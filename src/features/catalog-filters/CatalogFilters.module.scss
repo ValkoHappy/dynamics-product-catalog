@@ -1,0 +1,87 @@
+.filters {
+  background: white;
+  padding: 24px;
+  border: 1px solid #dedfd5;
+  border-radius: 8px;
+  margin-bottom: 24px;
+
+  label {
+    display: grid;
+    gap: 6px;
+    font-size: 14px;
+  }
+
+  input,
+  select {
+    width: 100%;
+    min-width: 0;
+    padding: 10px;
+    border: 1px solid #afb6a7;
+    border-radius: 8px;
+    background: white;
+    color: #252921;
+  }
+
+  button {
+    padding: 10px 16px;
+    border: 1px solid #9ca3af;
+    border-radius: 8px;
+    background: #f3f4f6;
+    color: #374151;
+    cursor: pointer;
+  }
+
+  button:disabled {
+    opacity: 0.5;
+    cursor: default;
+  }
+}
+
+.search {
+  display: grid;
+  gap: 8px;
+
+  small {
+    color: #687160;
+  }
+}
+
+.reset {
+  margin: 8px 0 0 8px;
+}
+
+.searchControls {
+  display: flex;
+  gap: 8px;
+}
+
+.fields {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  margin: 20px 0;
+}
+
+@media (max-width: 760px) {
+  .fields {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 480px) {
+  .filters {
+    padding: 16px;
+  }
+
+  .fields {
+    grid-template-columns: 1fr;
+  }
+
+  .searchControls {
+    flex-wrap: wrap;
+
+    input {
+      flex-basis: 100%;
+    }
+  }
+}
